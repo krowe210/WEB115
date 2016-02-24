@@ -1,0 +1,204 @@
+body {
+    font-family: 'Calligraffitti', cursive;
+    font-size: 16px;
+    background-color: darkkhaki;
+    color: darkred;
+    margin: 0;
+    padding: 0;
+    min-height: 800px;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+    font-family: 'Droid Sans Mono', ;
+    text-shadow: 1px 1px 1px black;
+}
+
+header h2 {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    background: darkkhaki;
+    color: darkred;
+    padding: 3px 5px;
+    border: 3px solid transparent;
+    /* Makes room for the border width on hover */
+    border-radius: 5px;
+    margin: 5px;
+    font-family:'Calligraffitti', cursive;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    /* Relative to the font size */
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+nav a.current {
+    background: darkkhaki;
+    color: darkred;
+    font-variant: small-caps;
+    font-weight: 800;
+    font-size: 1.4em;
+}
+
+nav a:hover {
+    background: black;
+    border-color: darkred;
+}
+
+.container {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 140%;
+}
+
+.intro-paragraph {
+    text-align: center;
+    font-size: 2em;
+}
+
+code {
+    /* You do not need this; I am just using it in my paragraphs */
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0px 6px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: none;
+}
+
+
+/* Tools: Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* All Grids */
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Grid Layout: Float */
+
+.float-grid figure {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+
+.float-grid figure:nth-of-type(4n+1) {
+    /* Selects the first image of each row (because 4 columns) and clears the float to make sure that it lines up in a grid */
+    clear: left;
+}
+
+
+/* Column Grid */
+
+.column-grid .gallery {
+    /* Remember the browser prefixes! */
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+
+.column-grid figure {
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.column-grid figure img {
+    border: 15px solid darkred;
+    box-sizing: border-box;
+    /* Otherwise the border would add to the width of the image box */
+}
+
+
+/* Caption Gallery */
+
+.caption-grid .gallery {
+    /* Remember the browser prefixes! */
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+
+.caption-grid figure {
+    margin: 0 0 20px;
+    width: 100%;
+    position: relative;
+    /* We need a relative each time we have an absolute */
+}
+
+.caption-grid figcaption {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 5px 5px;
+    position: absolute;
+    /* We must have a position: relative; on a parent element to make sure this lines up in the right place */
+    width: 100%;
+    bottom: 0px;
+    /* Could be top if you want the captions to, well, be at the top of the figure */
+}
+
+.caption-grid figure img {
+    border-width: 5px 5px 0;
+}
+
+.caption-grid figcaption,
+.caption-grid figure img {
+    border-style: solid;
+    border-color: darkred;
+    box-sizing: border-box;
+}

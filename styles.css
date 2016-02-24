@@ -1,0 +1,28 @@
+body {
+    background: black;
+    font-family: elephant;
+}
+
+#container {
+    background: lightblue;
+    color: darkgreen;
+    width: 1200px;
+    min-height: 700px;
+    margin: 5px auto;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+header {
+    padding: 10px;
+}
+
+main {
+    min-height: 450px;
+}
+
+footer {
+    border: 2px solid black;
+    padding: 10px;
+}
